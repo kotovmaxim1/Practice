@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import page.SimpleFormRegistration;
+import static page.ScreenshotHelper.takeScreenshot;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static util.URL.URL_SAND_BOX;
@@ -41,6 +42,7 @@ public class SimpleFormRegistrationTest {
         String actualText = simpleFormRegistration.findSimpleRegisterSuccessText();
         String expectedText = "Форма успешно отправлена!";
         assertEquals(expectedText, actualText);
+        takeScreenshot(driver);
     }
 
     @AfterEach
